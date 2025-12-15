@@ -1,34 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center">
+      <div className="max-w-xl space-y-6 p-8 bg-slate-900/70 backdrop-blur rounded-2xl border border-slate-800 shadow-2xl">
+        <div className="space-y-2">
+          <p className="text-sm uppercase tracking-[0.2em] text-indigo-300/80">
+            Tailwind check
+          </p>
+          <h1 className="text-3xl font-semibold">Tailwind should style this</h1>
+          <p className="text-red-500">
+            If you see the dark background, rounded corners, and spaced layout,
+            Tailwind is working. Try editing this component to add more utility
+            classes and watch it update live.
+          </p>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          <button className="rounded-lg bg-indigo-500 px-4 py-2 font-medium text-white shadow hover:bg-indigo-400 transition">
+            Indigo button
+          </button>
+          <button className="rounded-lg border border-slate-700 px-4 py-2 font-medium text-slate-100 hover:border-indigo-400 transition">
+            Outline button
+          </button>
+          <div className="sm:col-span-2 rounded-lg border border-dashed border-slate-700 px-4 py-3 text-sm text-slate-300">
+            Tip: make sure the dev server restarts after installing Tailwind so
+            old CSS is cleared out.
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
   )
 }
 
